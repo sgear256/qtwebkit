@@ -13,7 +13,7 @@
 #ifndef STORAGE_LEVELDB_INCLUDE_ENV_H_
 #define STORAGE_LEVELDB_INCLUDE_ENV_H_
 
-#include <cstdarg>
+#include <stdarg.h>
 #include <string>
 #include <vector>
 #include <stdint.h>
