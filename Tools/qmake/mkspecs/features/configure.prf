@@ -107,8 +107,8 @@ defineTest(finalizeConfigure) {
     }
 
     production_build:qnx {
-        CONFIGURE_WARNINGS += "QtWebKitQml will not be build. It is not supported on QNX."
-        WEBKIT_CONFIG -= build_webkit2 build_minibrowser build_wtr
+        CONFIGURE_WARNINGS += "QtWebKitQml will not be build. It is not supported on QNX. --nah, building anyways"
+        #WEBKIT_CONFIG -= build_webkit2 build_minibrowser build_wtr
     }
 
     # Sanitize clashing options
@@ -124,7 +124,7 @@ defineTest(finalizeConfigure) {
        addReasonForSkippingBuild("ICU is required.")
     }
     production_build:blackberry {
-        addReasonForSkippingBuild("Build not supported on BB10.")
+        #addReasonForSkippingBuild("Build not supported on BB10.")
     }
     production_build:android {
         addReasonForSkippingBuild("Build not supported on Android.")

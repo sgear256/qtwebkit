@@ -554,6 +554,7 @@ bool Connection::sendOutgoingMessage(PassOwnPtr<MessageEncoder> encoder)
 
     int bytesSent = 0;
     while ((bytesSent = sendmsg(m_socketDescriptor, &message, 0)) == -1) {
+        //usleep(3000000);
         if (errno != EINTR)
             return false;
     }

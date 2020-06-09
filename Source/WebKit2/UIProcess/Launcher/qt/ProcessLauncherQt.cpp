@@ -77,7 +77,9 @@ extern "C" kern_return_t bootstrap_register2(mach_port_t, name_t, mach_port_t, u
 #if defined(SOCK_SEQPACKET) && !defined(Q_OS_MACX) && !OS(QNX)
 #define SOCKET_TYPE SOCK_SEQPACKET
 #else
-#define SOCKET_TYPE SOCK_DGRAM
+//#define SOCKET_TYPE SOCK_DGRAM
+//FIXME: not sure if this is a good idea but it seems to solve the problem with sendmsg running out of buffer space. 
+#define SOCKET_TYPE SOCK_STREAM 
 #endif
 
 using namespace WebCore;
